@@ -33,6 +33,7 @@ app.get('/messages', (req,res) => {
     //res.json({"msgs":msgs})
 })
 
-app.listen(3000, () => {
-    console.log("Server is Running")
-})
+let port = process.env.PORT || 3000;
+app.listen(port, ()=> {
+    console.log('listening at ', port);
+});
